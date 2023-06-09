@@ -8,11 +8,9 @@ import { HeroesService } from 'src/app/shared/services/heroes.service';
   styleUrls: ['./cuerpo.component.css']
 })
 export class CuerpoComponent {
-  public heroesService: HeroesService;
   public listadoHeroes: Heroe[];
 
-  constructor(heroesService: HeroesService) {
-    this.heroesService = heroesService;
+  constructor(private heroesService: HeroesService) {
     this.listadoHeroes = [];
   }
 
