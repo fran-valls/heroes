@@ -1,5 +1,5 @@
 // model
-export class heroe {
+export class Heroe {
     //Atributos
     public nombre: string; 
     public poder: number; 
