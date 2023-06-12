@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pie',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./pie.component.css']
 })
 export class PieComponent {
-
+  @Input() public texto: string = "Copyright"; 
+  @Input() public year: number = new Date().getFullYear();
 }
