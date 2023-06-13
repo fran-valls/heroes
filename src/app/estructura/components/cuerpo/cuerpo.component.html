@@ -1,8 +1,13 @@
 <main class="container">
     <div class="row">
-        <div class="col"></div>
+        <div class="col">
+            <div (click)="borrarFavorito()" *ngIf="heroeFavorito">
+                <div id="favorito" *ngIf="heroeFavorito" class="alert alert-danger"> <h4>Favorito</h4> <hr/> <p>{{heroeFavorito.nombre}}</p> <img *ngIf="heroeFavorito.imagen" [src]="heroeFavorito.imagen" alt="avatar" height="150px"/> </div>    
+
+            </div>
+        </div>
         <div class="col-10">
-            <app-listado></app-listado>    
+            <app-listado (eventoFavorito)="procesarEvento($event)"></app-listado>    
         </div>
         <div class="col"></div>
     </div>

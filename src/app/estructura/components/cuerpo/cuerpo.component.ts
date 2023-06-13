@@ -8,5 +8,12 @@ import { HeroesService } from 'src/app/shared/services/heroes.service';
   styleUrls: ['./cuerpo.component.css']
 })
 export class CuerpoComponent {
+borrarFavorito() {
+throw new Error('Method not implemented.');
+}
+  public heroeFavorito?:Heroe;
 
+  public procesarEvento(heroeRecibido: Heroe ):void{
+    this.heroeFavorito = heroeRecibido;
+  }
 }

@@ -16,7 +16,7 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let heroe of listadoHeroes" [class]="
+          <tr (click)="onSeleccionarHeroe(heroe)" *ngFor="let heroe of listadoHeroes" [class]="
                                       {
                                           'table-info': heroe.honor > 70,
                                           'table-danger' : heroe.honor < -70

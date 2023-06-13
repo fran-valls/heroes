@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Heroe } from 'src/app/shared/models/heroe.model';
 import { HeroesService } from 'src/app/shared/services/heroes.service';
+
 
 @Component({
   selector: 'app-listado',
@@ -9,6 +10,8 @@ import { HeroesService } from 'src/app/shared/services/heroes.service';
 })
 export class ListadoComponent {
   public listadoHeroes: Heroe[];
+
+  @Output() public eventoFavorito = new EventEmitter<Heroe>();
 
   constructor(private heroesService: HeroesService) {
     this.listadoHeroes = [];
@@ -26,4 +29,9 @@ export class ListadoComponent {
   public hayHeroes(): boolean {
     return this.listadoHeroes.length > 0;
   }
+
+  public onSeleccionarHeroe(heroeFavorito: Heroe): void {
+    this.eventoFavorito.emit(heroeFavorito);
+  }
+
 }
