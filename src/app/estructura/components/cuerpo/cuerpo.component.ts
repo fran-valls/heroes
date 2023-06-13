@@ -8,13 +8,5 @@ import { HeroesService } from 'src/app/shared/services/heroes.service';
   styleUrls: ['./cuerpo.component.css']
 })
 export class CuerpoComponent {
-  public listadoHeroes: Heroe[];
 
-  constructor(private heroesService: HeroesService) {
-    this.listadoHeroes = [];
-  }
-
-  ngOnInit(): void {
-    this.listadoHeroes = this.heroesService.getHeroes();
-  }
 }
