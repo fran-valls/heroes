@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EsPoderosoPipe } from './pipes/es-poderoso.pipe';
 import { HonorPipe } from './pipes/honor.pipe';
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -11,7 +12,8 @@ import { HonorPipe } from './pipes/honor.pipe';
     HonorPipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [
     HonorPipe,

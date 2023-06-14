@@ -1,6 +1,12 @@
 <!-- Grupo de tarjetas -->
 <!-- En próximas actualizaciones podemos reordenar las tarjetas-->
 <div>
+  <div *ngIf="cargandoDatos">
+    <span class="fs-3">Cargando héroes </span>
+    <div  class="spinner-border" role="status">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
   <!-- Cada tarjeta individual -->
   <ng-container *ngFor="let heroe of heroes">
     <div
