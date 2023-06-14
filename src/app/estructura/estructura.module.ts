@@ -10,6 +10,7 @@ import { NavegacionComponent } from './components/navegacion/navegacion.componen
 import { HomeComponent } from './components/home/home.component';
 import { ListadoTarjetaComponent } from './components/listado-tarjeta/listado-tarjeta.component';
 import { BarraComponent } from './components/barra/barra.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -27,7 +28,8 @@ import { BarraComponent } from './components/barra/barra.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ],
   exports: [
     PrincipalComponent

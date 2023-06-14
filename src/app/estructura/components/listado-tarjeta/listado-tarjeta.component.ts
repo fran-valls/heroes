@@ -11,6 +11,7 @@ export class ListadoTarjetaComponent implements OnInit{
   public heroes: Heroe[];
 
   constructor(public heroesService: HeroesService) {
+    console.log('Tarjeta component ha sido cargado');
     this.heroes = [];
   }
 

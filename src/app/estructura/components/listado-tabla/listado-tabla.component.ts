@@ -15,6 +15,7 @@ export class ListadoTablaComponent {
 
   constructor(private heroesService: HeroesService) {
     this.listadoHeroes = [];
+    console.log('Listado-tabla component ha sido cargado')
   }
 
   //Las llamadas a los servicios, no deberían de estar en el constructor.
