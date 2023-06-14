@@ -6,6 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./pie.component.css']
 })
 export class PieComponent {
-  @Input() public texto: string = "Copyright"; 
+  @Input() public texto: string = "Copyright (c)"; 
   @Input() public year: number = new Date().getFullYear();
+
+  public actualizacion: Date = new Date();
 }

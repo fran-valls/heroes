@@ -1,14 +1,9 @@
-// model
-export class Heroe {
-
-
-    //Constructor 
-    constructor (
-        public nombre:string, 
-        public poder:number, 
-        public honor:number, 
-        public ataque:number, 
-        public defensa:number, 
-        public vida:number, 
-        public imagen:string) {}
+export interface Heroe {
+    nombre: string;
+    poder: number;
+    honor: number; 
+    ataque: number; 
+    defensa: number; 
+    vida: number, 
+    imagen: string;
 }

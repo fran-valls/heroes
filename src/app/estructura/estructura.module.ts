@@ -4,7 +4,12 @@ import { CabeceraComponent } from './components/cabecera/cabecera.component';
 import { CuerpoComponent } from './components/cuerpo/cuerpo.component';
 import { PieComponent } from './components/pie/pie.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
-import { ListadoComponent } from './components/listado/listado.component';
+import { ListadoTablaComponent } from './components/listado-tabla/listado-tabla.component';
+import { SharedModule} from "../shared/shared.module";
+import { NavegacionComponent } from './components/navegacion/navegacion.component';
+import { HomeComponent } from './components/home/home.component';
+import { ListadoTarjetaComponent } from './components/listado-tarjeta/listado-tarjeta.component';
+import { BarraComponent } from './components/barra/barra.component';
 
 
 
@@ -14,10 +19,15 @@ import { ListadoComponent } from './components/listado/listado.component';
     CuerpoComponent,
     PieComponent,
     PrincipalComponent,
-    ListadoComponent
+    ListadoTablaComponent,
+    NavegacionComponent,
+    HomeComponent,
+    ListadoTarjetaComponent,
+    BarraComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: [
     PrincipalComponent

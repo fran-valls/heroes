@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Heroe } from 'src/app/shared/models/heroe.model';
-import { HeroesService } from 'src/app/shared/services/heroes.service';
+import {Heroe} from "../../../shared/models/heroe.model";
 
 @Component({
   selector: 'app-cuerpo',
@@ -8,12 +7,15 @@ import { HeroesService } from 'src/app/shared/services/heroes.service';
   styleUrls: ['./cuerpo.component.css']
 })
 export class CuerpoComponent {
-borrarFavorito() {
-throw new Error('Method not implemented.');
-}
-  public heroeFavorito?:Heroe;
 
-  public procesarEvento(heroeRecibido: Heroe ):void{
+  public heroeFavorito!: Heroe | undefined;
+
+  public procesarEvento(heroeRecibido: Heroe) :void {
+    console.log("El hijo le dice al padre: ", heroeRecibido);
     this.heroeFavorito = heroeRecibido;
+  }
+
+  public borrarFavorito() {
+    this.heroeFavorito = undefined;
   }
 }
